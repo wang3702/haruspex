@@ -25,6 +25,6 @@ if __name__ == "__main__":
             exit()
         choose = params['choose']
         os.environ["CUDA_VISIBLE_DEVICES"] = choose
-        from Evaluate.Evaluate_Haruspex import Evaluate_Haruospex
-        Evaluate_Haruospex(input_path,study_file_path,indicate,type)
+        from Evaluate.Evaluate_Haruspex import Evaluate_Haruspex
+        Evaluate_Haruspex(input_path,study_file_path,indicate,type)
 

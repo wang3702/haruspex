@@ -1,7 +1,7 @@
 import os
 from ops.os_operation import mkdir
 
-def Evaluate_Haruospex(input_path,study_file_path,indicate,type):
+def Evaluate_Haruspex(input_path,study_file_path,indicate,type):
     test_id_list = []  # the list which we needs to get phase2 input
     if type!=3:
         with open(study_file_path, 'r') as file:

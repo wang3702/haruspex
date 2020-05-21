@@ -11,7 +11,7 @@ def Evaluate_Haruspex(input_path,study_file_path,indicate,type):
                 test_id_list.append(line)
                 line = file.readline()
     else:
-        for k in range(4):
+        for k in range(1,5):
             tmp_study_path=os.path.join(study_file_path,'Fold'+str(k)+'.txt')
             tmp_list=[]
             with open(tmp_study_path, 'r') as file:

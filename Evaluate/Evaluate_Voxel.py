@@ -20,7 +20,7 @@ def Evaluate_Voxel(haru_path,input_path,type,indicate):
     with open(tmp_csv_path, 'w') as csvfile:
         csvfile.write("PDB_ID,Beta f1, Alpha f1,DRNA f1, overall f1,Beta recall, Alpha recall,DRNA recall, overall recall\n")
         for item in listfiles:
-            tmp_predict_path = os.path.join(haru_path, item)
+            tmp_predict_path = os.path.join(input_path, item)
             pdb_id = item[:4]
             tmp_haru_path = os.path.join(haru_path, pdb_id)
             if type != 3:

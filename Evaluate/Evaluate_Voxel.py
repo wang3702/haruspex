@@ -43,9 +43,9 @@ def Evaluate_Voxel(haru_path,input_path,type,indicate):
             pR = []
             for location in Label_dict.keys():
                 split_result = location.split(',')
-                z = int(split_result[0] * 2)
-                y = int(split_result[1] * 2)
-                x = int(split_result[2] * 2)
+                z = int(int(split_result[0]) * factor)
+                y = int(int(split_result[1])* factor)
+                x = int(int(split_result[2])* factor)
                 tmp_label = Label_dict[location] - 1  # 0: beta 1:alpha 2:dna/rna
                 tmp_pred = int(np.argmax(haru_result[x, y, z]))
                 tmp_sum = np.sum(tmp_pred)

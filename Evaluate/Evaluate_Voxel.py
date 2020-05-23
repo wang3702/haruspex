@@ -47,6 +47,8 @@ def Evaluate_Voxel(haru_path,input_path,type,indicate):
                 y = int(int(split_result[1])* factor)
                 x = int(int(split_result[2])* factor)
                 tmp_label = Label_dict[location] - 1  # 0: beta 1:alpha 2:dna/rna
+                if tmp_label==-1:
+                    continue#do not evaluate coil
                 tmp_pred = int(np.argmax(haru_result[x, y, z]))
                 tmp_sum = np.sum(tmp_pred)
                 if tmp_sum == 0:

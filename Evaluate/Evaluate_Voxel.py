@@ -84,7 +84,7 @@ def Evaluate_Voxel(haru_path,input_path,type,indicate):
         for key in F1_Dict:
             file.write(str(key) + "\t")
             file.write(str(np.mean(F1_Dict[key])) + "\t")
-            file.write(str(np.mean(Accuracy_Dict[key])) + "\t")
+            file.write(str(np.mean(Accuracy_Dict[key])) + "\t\n")
 
 
 

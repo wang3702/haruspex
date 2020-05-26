@@ -66,7 +66,7 @@ def Evaluate_Voxel(haru_path,input_path,type,indicate):
             accuracy = recall_score(true_array, pred_array, labels=[0, 1, 2, 3], average=None)
             overall_accuracy = recall_score(true_array, pred_array, average='weighted', zero_division=1)
             csvfile.write(
-                str(accuracy[0]) + "," + str(accuracy[1]) + "," + str(accuracy[2]) + "," + str(accuracy[3]) + "," + str(
+                str(accuracy[0]) + "," + str(accuracy[1]) + "," + str(accuracy[2]) + "," + "," + str(
                     overall_accuracy) + ",\n")
             tmp_true_array = np.array(true_array)
             for k in range(4):

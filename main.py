@@ -1,6 +1,7 @@
 
 import os
 from ops.argparser import argparser
+from ops.os_operation import mkdir
 
 
 if __name__ == "__main__":
@@ -47,6 +48,23 @@ if __name__ == "__main__":
             exit()
         from Evaluate.Evaluate_Voxel import Evaluate_Voxel
         Evaluate_Voxel(haru_path,study_path,type,indicate)
+    elif params['mode']==2:
+        all_map_path=os.path.abspath(params['F'])
+        import time
+        import datetime
+
+        today = datetime.date.today()
+        formatted_today = today.strftime('%y%m%d')
+        now = time.strftime("%H:%M:%S")
+        save_path=os.path.join(os.getcwd(),"Gen_Result")
+        mkdir(save_path)
+        save_path=os.path.join(save_path,formatted_today+now)
+        mkdir(save_path)
+        from Evaluate.Gen_Predictions import Gen_Predictions
+        Gen_Predictions(all_map_path,save_path)
+
+
+
 
 
 
